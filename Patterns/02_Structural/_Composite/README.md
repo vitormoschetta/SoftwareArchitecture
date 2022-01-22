@@ -1,0 +1,2 @@
+O padrão de projeto Composite compõe objetos em estruturas de árvore para representar hierarquias parte-todo. 
+Esse padrão permite que os clientes tratem objetos individuais e composições de objetos de maneira uniforme. 
