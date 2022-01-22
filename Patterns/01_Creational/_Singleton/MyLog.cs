@@ -9,7 +9,7 @@ namespace _Singleton
 
         public static MyLog Init()
         {
-            if (myLog != null)
+            if (myLog is null)
             {
                 myLog = new MyLog();
             }
