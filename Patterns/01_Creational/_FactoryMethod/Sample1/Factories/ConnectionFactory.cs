@@ -1,19 +1,19 @@
-using Sample1.Commands;
+using Sample1.Connections;
 using Sample1.Enum;
 
 namespace Sample1.Factories
 {
-    public class CommandFactory
+    public class ConnectionFactory
     {
-        public CommandBase FactoryMethod(EDataBaseType dataBaseType)
+        public ConnectionBase GetConnection(EDataBaseType dataBaseType)
         {
             switch (dataBaseType)
             {
                 case EDataBaseType.Oracle:
-                    return new OracleCommand();
+                    return new OracleConnection();
 
                 case EDataBaseType.MySql:
-                    return new MySqlCommand();
+                    return new MySqlConnection();
 
                 default:
                     throw new System.Exception("Invalid database type");

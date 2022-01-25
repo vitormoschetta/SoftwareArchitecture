@@ -7,11 +7,11 @@ namespace Sample1
     {
         static void Main(string[] args)
         {
-            var sqlCommand = new CommandFactory().FactoryMethod(EDataBaseType.Oracle);
-            sqlCommand.Insert();
+            var sqlCommand = new ConnectionFactory().GetConnection(EDataBaseType.Oracle);
+            sqlCommand.Connect();
 
-            sqlCommand = new CommandFactory().FactoryMethod(EDataBaseType.MySql);
-            sqlCommand.Insert();
+            sqlCommand = new ConnectionFactory().GetConnection(EDataBaseType.MySql);
+            sqlCommand.Connect();
         }
     }
 }

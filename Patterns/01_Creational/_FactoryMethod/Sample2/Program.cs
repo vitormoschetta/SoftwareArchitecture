@@ -1,4 +1,5 @@
 ﻿using System;
+using Sample2.Connections;
 using Sample2.Enum;
 using Sample2.Factories;
 
@@ -8,11 +9,11 @@ namespace Sample2
     {
         static void Main(string[] args)
         {
-            var sqlCommand = new CommandFactory().FactoryMethod(EDataBaseType.Oracle);
-            sqlCommand.Insert();
+            IConnection connection = new ConnectionFactory().GetConnection(EDataBaseType.Oracle);
+            connection.Connect();
 
-            sqlCommand = new CommandFactory().FactoryMethod(EDataBaseType.MySql);
-            sqlCommand.Insert();
+            connection = new ConnectionFactory().GetConnection(EDataBaseType.MySql);
+            connection.Connect();
         }
     }
 }

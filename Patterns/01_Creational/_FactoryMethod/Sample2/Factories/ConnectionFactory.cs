@@ -1,23 +1,23 @@
-using Sample2.Commands;
+using Sample2.Connections;
 using Sample2.Enum;
 
 namespace Sample2.Factories
 {
-    public class CommandFactory : ICommandFactory
+    public class ConnectionFactory : IConnectionFactory
     {
-        public ICommand FactoryMethod(EDataBaseType dataBaseType)
+        public IConnection GetConnection(EDataBaseType dataBaseType)
         {
             switch (dataBaseType)
             {
                 case EDataBaseType.Oracle:
-                    return new OracleCommand();
+                    return new OracleConnection();
 
                 case EDataBaseType.MySql:
-                    return new MySqlCommand();
+                    return new MySqlConnection();
 
                 default:
                     throw new System.Exception("Invalid database type");
             }
         }
-    }
+    }  
 }
