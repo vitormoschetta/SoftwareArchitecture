@@ -11,6 +11,7 @@ namespace Sample1
         private Serasa _serasa;
         private SPC _spc;
         private Credit _credito;
+
         public Facade(Serasa serasa, SPC spc, Credit credito)
         {
             _serasa = serasa;

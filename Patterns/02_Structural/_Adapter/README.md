@@ -1,3 +1,8 @@
+## Adapter
+
+O padrão de design Adapter converte a interface de uma classe em outra interface que os clientes esperam. Esse padrão de design permite que as classes trabalhem juntas de outra forma devido a interfaces incompatíveis.
+
+
 ### Contexto:
 
 Temos uma classe chamada `DbCommand` que implementa um contrato `IDbCommand`. No contrato existem três métodos:
